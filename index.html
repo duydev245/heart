@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”Generator” content=”EditPlus”>
-    <meta name=”Author” content=””>
-    <meta name=”Keywords” content=””>
-    <meta name=”Description” content=””>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
     <link rel="shortcut icon" href="./img/heart.jpg" type="image/x-icon">
     <title>LoveUuu</title>
 
@@ -20,18 +20,27 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="content">
+        <div class="content wow animate__animated animate__fadeIn">
             <h3>Chào em!!!</h3>
-            <p>a</p>
-            <div class="button">
-                <button class="btn_gradient" onclick="clg()">Cóa</button>
-                <button class="btn_gradient">Khomm</button>
+            <p>Hôm nay là 
+                ngày <span class="counter">20</span>
+                tháng <span class="counter">3</span>
+                năm <span class="counter">2024</span>
+            </p>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="3s">Hôm nay chính là ngày sinh nhật của embe á</p>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="4s">Anh có món quà tặng em. Em có muốn nhận hong?</p>
+            <div class="button-container wow animate__animated animate__fadeInUp" data-wow-delay="4s">
+                <button class="btn_gradient" onclick="showHeart()">Cóaa</button>
+                <button class="btn_gradient btn_move" id="myButton" onclick="moveButton()">Hongg</button>
             </div>
             <canvas id='pinkboard'></canvas>
         </div>
@@ -63,8 +72,7 @@
     <!-- Config Count Up -->
     <script>
         $('.counter').countUp({
-            delay: 10,
-            time: 3000,
+            'time': 2000,
         });
     </script>
 

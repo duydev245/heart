@@ -166,7 +166,7 @@ var ParticlePool = (function () {
 })();
 
 /* Putting it all together */
-(function heart(canvas) {
+(function (canvas) {
     var context = canvas.getContext('2d'),
         particles = new ParticlePool(settings.particles.length),
         particleRate = settings.particles.length / settings.particles.duration, // particles/sec
@@ -259,9 +259,30 @@ var ParticlePool = (function () {
     }, 10);
 })(document.getElementById('pinkboard'));
 
-
-function clg() {
+// showHeart function
+function showHeart() {
     const elCanvas = document.getElementById('pinkboard')
     elCanvas.style.opacity = '1';
     elCanvas.style.zIndex = '1';
 }
+
+// moveButton function
+function moveButton() {
+    var button = document.querySelector('.btn_move');
+    var viewportWidth =  window.innerWidth;
+    var viewportHeight = window.innerHeight;
+
+    button.style.position = "absolute";
+    
+    // Calculate random positions within the viewport
+    var randomLeft = Math.floor(Math.random() * (viewportWidth - button.offsetWidth));
+    var randomTop = Math.floor(Math.random() * (viewportHeight - button.offsetHeight));
+
+    // Apply new positions
+    button.style.left = randomLeft + 'px';
+    button.style.top = randomTop + 'px';
+}
+
+
+
+
