@@ -268,6 +268,11 @@ function showHeart() {
 
 // moveButton function
 function moveButton() {
+    // Swal.fire({
+    //     title: 'Dám chê quà của tui hả!?',
+    //     icon: "error"
+    // });
+
     var button = document.querySelector('.btn_move');
     var viewportWidth =  window.innerWidth;
     var viewportHeight = window.innerHeight;
